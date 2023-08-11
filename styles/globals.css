@@ -2,26 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root {
+  --types-normal: 170, 170, 153;
+  --types-fire: 255, 68, 34;
+  --types-water: 51, 153, 255;
+  --types-electric: 255, 204, 51;
+  --types-grass: 119, 204, 85;
+  --types-ice: 102, 204, 255;
+  --types-fighting: 187, 85, 68;
+  --types-poison: 170, 85, 153;
+  --types-ground: 221, 187, 85;
+  --types-flying: 136, 153, 255;
+  --types-psychic: 255, 85, 153;
+  --types-bug: 170, 187, 34;
+  --types-rock: 187, 170, 102;
+  --types-ghost: 102, 102, 187;
+  --types-dragon: 119, 102, 238;
+  --types-dark: 119, 85, 68;
+  --types-steel: 170, 170, 187;
+  --types-fairy: 238, 153, 238;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-[#1F3B70]/30 rounded-full
+  /* background: #93342633; */
+  /* border-radius: 999px; */;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-[#1F3B70]/60 rounded-full
+  /* background: #93342680; */
+  /* border-radius: 999px; */;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#1F3B70]/80
+  /* background: #933426; */;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+  @apply bg-zinc-100;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-lg text-black font-black tracking-wide;
+}
+
+th,
+td {
+  @apply p-2 border-y border-black/10;
+}
+
+th {
+  @apply w-1/4 min-w-[120px] text-end text-black/40;
+}
+
+.description_main_container {
+  @apply flex flex-col gap-8 justify-start items-start;
+}
+
+.description_item_container {
+  @apply flex flex-col items-start justify-center text-center gap-1;
+}
+
+.description_content {
+  @apply font-bold;
+}
